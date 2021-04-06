@@ -1,0 +1,103 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Form.master.cs" Inherits="Cake_Project.GUI.Form" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+            /* Menu */
+
+            #menuContaniner {
+                width: 500px;
+                float: right;
+                margin: -60px 0 0 0;
+                background-color:#FFFFFF;/* trắng */
+            }
+            ul.main_nav {
+                margin: 0 auto;
+                margin-left: -150px;	
+                padding: 0;
+                list-style: none;
+                height: 50px;
+            }
+
+            ul.main_nav li {
+                border-right: 1px solid #BCBCBC;
+                float: left;
+                position: relative;
+                text-align: center;
+                margin: 0;
+                padding: 0;
+                display: inline;
+                height: 45px;
+                padding-top: 5px;
+            }
+            ul.main_nav li a {
+                color: #000000;
+                width: 100px;
+                padding: 10px;
+                text-decoration: none;
+                display: block;
+            }
+
+            /* Content */
+
+            #mainContainer {
+                width: 1200px;
+                height: 100%;
+                margin: 40px auto;
+                padding: 20px 5px;
+                background: #FFFFFF;
+            }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+            <div id="header" style="width: 100%; height: 100px; margin: 0 auto; background-color:#FFFFFF; border: none solid #8C0209;">
+            <div>
+                <h1 style="float:left; margin-left:15px; font-size:50px;">
+                    <span style=""><a href="Home.aspx" style="text-decoration: none;color:#f435bc">Nam</a> </span><span style=""><a href="Home.aspx"style="text-decoration: none;color:#000000">Store</a></span>
+                </h1>
+                <p style="float:left;margin-top:80px;font-weight:900;margin-left: 5px;word-spacing: 2px;color:black;font-size:20px;">
+                    Baking Store
+                </p>
+            </div>
+        </div>
+        </header>  
+    <section id="menuContaniner">
+            <ul class="main_nav">
+                <li ><a  href="Home.aspx" style="color:orange;">Home</a></li>
+                <li ><a  href="About.aspx" style="color:red;">About </a></li>
+                <li ><a  href="Product.aspx"style="color:green;">Product</a></li>
+                <li ><a  href="CustomerGUI.aspx" style="color:deeppink;">Customer</a></li>
+                <li ><a  href="StaffGUI.aspx" style="color:blueviolet;">Staff</a></li>
+            </ul>
+        </section>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <footer>
+            <div id="footer" style="height: 200px; margin: 0 auto;padding: 0 20px;
+             background-color: #D3D3D3; border: none solid #8C0209;">
+            <p style="float:left; margin:30px; font-size:60px;"> <span style="color:#DAA520">Nam </span><span style="color:#000000">Store</span>
+            </p>
+                        <p style="float:right;margin:30px;text-align:left;font-size:15px;margin-right:10px;">
+                            <b style="text-align:center;">Our Story</b><br/><br/>
+                            <span style="color:#556B2F;">Nam Store is a Hanoi-based bakeshop, which is <br/>
+                                known for it’s elegant and delicious selection of <br/>
+                                freshly baked sweet treats and beautifully detailed<br/> custom cakes. 
+                                Our custom and bakeshop treats are<br/>  
+                                baked fresh daily, using only the best ingredients
+                            </span>
+                            </p>
+                            </div>
+                            <div  style=" margin: 0 auto;padding: 0 20px; background-color: #D3D3D3; border: none solid #8C0209; text-align:center" >© 2021 by Nam Studio Co. All Rights Reserved.</div>
+        </footer>
+    </form>
+</body>
+</html>
